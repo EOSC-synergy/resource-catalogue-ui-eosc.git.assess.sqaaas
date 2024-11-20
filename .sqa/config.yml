@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/madgeek-arc/resource-catalogue-ui-eosc:
+      branch: master
+      repo: https://github.com/madgeek-arc/resource-catalogue-ui-eosc.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/madgeek-arc/resource-catalogue-ui-eosc git:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-cream-otter.sh
+        container: qc.acc_cranky-lilac-devil
+  QC.Doc:
+    repos:
+      github.com/madgeek-arc/resource-catalogue-ui-eosc find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-corn-cougar.sh
+        container: qc.doc_gummy-goldenrod-chihuahua
+      github.com/madgeek-arc/resource-catalogue-ui-eosc git:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-teal-shrimp.sh
+        container: qc.doc_lanky-wheat-avocet
+      github.com/madgeek-arc/resource-catalogue-ui-eosc markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-dandelion-tapir.sh
+        container: qc.doc_stealthy-xanthic-caterpillar
+  QC.Lic:
+    repos:
+      github.com/madgeek-arc/resource-catalogue-ui-eosc licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-fuchsia-jaguar.sh
+        container: qc.lic_muzzy-celadon-wrasse
+  QC.Sty:
+    repos:
+      github.com/madgeek-arc/resource-catalogue-ui-eosc hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woozy-firebrick-spitz.sh
+        container: qc.sty_pasty-chestnut-cockroach
+      github.com/madgeek-arc/resource-catalogue-ui-eosc jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woozy-heliotrope-pig.sh
+        container: qc.sty_hasty-sangria-husky
+  QC.Ver:
+    repos:
+      github.com/madgeek-arc/resource-catalogue-ui-eosc get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-sapphire-booby.sh
+        container: qc.ver_flabby-violet-salamander
+timeout: 5400
