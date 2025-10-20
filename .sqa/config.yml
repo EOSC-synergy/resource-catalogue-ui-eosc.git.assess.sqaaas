@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui-eosc git:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-eggplant-salamander.sh
-        container: qc.acc_trippy-tomato-mole
+        - /usr/bin/env sh .sqa/script.hasty-burgundy-crab.sh
+        container: qc.acc_trippy-chartreuse-termite
   QC.Doc:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui-eosc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-olivine-balinese.sh
-        container: qc.doc_hilly-saffron-ibis
+        - /usr/bin/env sh .sqa/script.snippy-amaranth-duck.sh
+        container: qc.doc_craggy-myrtle-cat
       github.com/madgeek-arc/resource-catalogue-ui-eosc git:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-cardinal-budgerigar.sh
-        container: qc.doc_ready-carmine-akita
+        - /usr/bin/env sh .sqa/script.geeky-aquamarine-booby.sh
+        container: qc.doc_seedy-beige-tuatara
       github.com/madgeek-arc/resource-catalogue-ui-eosc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-crimson-centipede.sh
-        container: qc.doc_thirsty-gamboge-neanderthal
+        - /usr/bin/env sh .sqa/script.ugly-razzmatazz-barnacle.sh
+        container: qc.doc_blurry-chestnut-fly
   QC.Lic:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui-eosc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-wisteria-mongrel.sh
-        container: qc.lic_trippy-myrtle-akita
+        - /usr/bin/env sh .sqa/script.lumpy-malachite-alligator.sh
+        container: qc.lic_breezy-tomato-stoat
   QC.Sty:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui-eosc hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-denim-baboon.sh
-        container: qc.sty_lovely-puce-coyote
+        - /usr/bin/env sh .sqa/script.frumpy-wisteria-oyster.sh
+        container: qc.sty_snoopy-dandelion-shrew
       github.com/madgeek-arc/resource-catalogue-ui-eosc jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-tomato-wolfhound.sh
-        container: qc.sty_lumpy-seashell-tiger
+        - /usr/bin/env sh .sqa/script.dorky-platinum-wrasse.sh
+        container: qc.sty_leaky-thistle-jaguar
   QC.Ver:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui-eosc get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-chartreuse-moth.sh
-        container: qc.ver_gummy-bistre-panda
+        - /usr/bin/env sh .sqa/script.snappy-aqua-whale.sh
+        container: qc.ver_sloppy-myrtle-badger
 timeout: 5400
